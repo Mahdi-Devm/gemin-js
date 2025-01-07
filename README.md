@@ -9,7 +9,7 @@ Welcome to **Gemin**! This project focuses on creating a responsive design that 
 - **User-Friendly Interface**: Intuitive navigation for improved user engagement.
 - **Lightweight and Fast**: Optimized performance for quicker load times.
 
-[DEMO](https://raw.githack.com/Mahdi-Devm/gemin-js/main/index.html)
+[DEMO](https://rawcdn.githack.com/Mahdi-Devm/gemin-js/f6ee575ea3a403a3c9adaf5686f1b010802e684c/index.html)
 
 ## 🚀 Getting Started
 
