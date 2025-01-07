@@ -1,48 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
-body{
+body {
     background-color: #000000;
-}
-h2{
+  }
+  
+  h2 {
     color: rgb(255, 255, 255);
-}
-.header{
-justify-content: space-between;
-padding: 10px;
-}
-.header-title{
+  }
+  
+  .header {
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .header-title {
     font-family: "Open Sans", serif;
-}
-.header-btn{
+  }
+  
+  .header-btn {
     background-color: #1A1C1E;
     transition: all 400ms ease;
-}
-.header-btn:hover .header-btn-icon{
+  }
+  
+  .header-btn:hover .header-btn-icon {
     color: rgb(0, 0, 0);
-}
-.header-btn-icon{
-    width: 25px; 
+  }
+  
+  .header-btn-icon {
+    width: 25px;
     height: 25px;
     color: white;
-}
-.child-container{
+  }
+  
+  .child-container {
     width: 800px;
-    height: 92vh ;
-}
-.child-container-all-box{
+    height: 92vh;
+  }
+  
+  .child-container-all-box {
     height: 190px;
-}
-.child-container-li{
-    height: 655px;
-    background-color: #1A1C1E;
-    border-radius: 10px;
-    color: white;
-}
-/* استایل h1 */
-.child-container-li h1{
-    line-height: 1.6;
-}
-
-.child-container-text{
+  }
+  
+  .child-container-text {
     font-family: "Open Sans", serif;
     font-size: 60px;
     font-weight: bold; /* ضخامت فونت */
@@ -50,26 +47,32 @@ padding: 10px;
     background-clip: text; /* اعمال گرادیانت به متن */
     -webkit-background-clip: text; /* برای مرورگرهای Webkit */
     animation: glowing 1.5s ease-in-out infinite alternate; /* انیمیشن درخشش */
-}
-@keyframes glowing {
+  }
+  
+  @keyframes glowing {
     0% {
-        text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0
+      text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 15px #ff6f61;
     }
-}
-.child-container-text-tow{
+    100% {
+      text-shadow: 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61;
+    }
+  }
+  
+  .child-container-text-tow {
     opacity: 0.5;
     font-size: 40px;
-}
-/* استایل container ورودی و دکمه */
-.input-container {
+  }
+  
+  /* استایل container ورودی و دکمه */
+  .input-container {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center; /* دکمه و ورودی را در راستای عمودی وسط می‌آورد */
-}
-
-/* استایل ورودی */
-.custom-input {
+  }
+  
+  /* استایل ورودی */
+  .custom-input {
     background-color: #1A1C1E; /* رنگ پس‌زمینه ورودی */
     color: white; /* رنگ متن ورودی */
     border: 2px solid #ccc; /* حاشیه ورودی */
@@ -79,10 +82,10 @@ padding: 10px;
     font-size: 16px; /* اندازه فونت */
     font-family: "Open Sans", serif;
     padding-right: 50px; /* فضای سمت راست برای دکمه */
-}
-
-/* استایل دکمه */
-.input-button {
+  }
+  
+  /* استایل دکمه */
+  .input-button {
     position: absolute;
     right: 10px; /* قرار دادن دکمه در سمت راست ورودی */
     background-color: #101213;
@@ -93,25 +96,105 @@ padding: 10px;
     font-size: 16px; /* اندازه فونت دکمه */
     cursor: pointer; /* نشانگر موس به شکل دست می‌شود */
     transition: background-color 0.3s ease; /* انیمیشن برای تغییر رنگ پس‌زمینه دکمه */
-}
-
-/* تغییر رنگ دکمه در حالت hover */
-.input-button:hover {
+  }
+  
+  /* تغییر رنگ دکمه در حالت hover */
+  .input-button:hover {
     background-color: #222629;
-}
-
-/* استایل آیکون داخل دکمه */
-.input-button i {
+  }
+  
+  /* استایل آیکون داخل دکمه */
+  .input-button i {
     font-size: 20px; /* اندازه آیکون */
     margin-right: 5px; /* فاصله بین آیکون و متن */
-}
-
-.child-container-box-icon{
+  }
+  
+  .child-container-box-icon {
     background-color: #1A1C1E;
     width: 40px;
     border-radius: 15px;
     transition: all 400ms ease;
-}
-.child-container-box-icon:hover{
+  }
+  
+  .child-container-box-icon:hover {
     background-color: #26282b;
-}
+  }
+  
+  .generated-content {
+    width: 100%; /* عرض کامل در حالت عادی */
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+  }
+  
+  @media (max-width: 768px) { /* عرض کمتر از 768px (مثلاً تبلت و گوشی) */
+    .generated-content {
+      width: 80%; /* عرض 80% برای دستگاه‌های کوچک‌تر */
+      margin: 0 auto; /* قرار دادن در مرکز */
+    }
+  
+    /* برای نمایش دو باکس در حالت گوشی */
+    .col-12 {
+      width: 100%;
+    }
+  
+    /* نمایش دو باکس در ردیف در حالت تبلت و موبایل */
+    .child-container-all-box {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* عرض کمتر از 480px (مثلاً گوشی‌های کوچک) */
+    .generated-content {
+      width: 90%; /* عرض 90% برای گوشی‌های کوچک‌تر */
+      font-size: 14px; /* کاهش سایز فونت */
+    }
+  
+    .col-12 {
+      width: 100%;
+    }
+  }
+  
+  .generated-content {
+    background-color: #26282b;
+    color: #ffffff; /* رنگ متن */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 5px solid #1A1C1E; /* خط سمت چپ به رنگ سبز */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+    font-size: 16px;
+    font-family: "Open Sans", serif;
+  }
+  
+  .generated-content p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .child-container-li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1A1C1E;
+    border-radius: 10px;
+    color: white;
+    height: 655px; /* ارتفاع ثابت در حالت عادی */
+    min-height: 655px; /* حداقل ارتفاع برای زمانی که محتوا کم است */
+    max-height: 90vh; /* حداکثر ارتفاع (90% از ارتفاع ویوپورت) */
+    overflow-y: auto; /* اضافه کردن اسکرول عمودی در صورت نیاز */
+  }
+  @media (max-width: 480px) { /* عرض کمتر از 480px (مثلاً گوشی‌های کوچک) */
+    .child-container-li {
+      width: 100%; /* عرض 90% برای گوشی‌های کوچک‌تر */
+      font-size: 14px; /* کاهش سایز فونت */
+      min-height:190px
+    }
+  }
+  @media (max-width: 480px) { /* عرض کمتر از 480px (مثلاً گوشی‌های کوچک) */
+    .responsivebox {
+     margin-right: 40px;
+    }
+  }
