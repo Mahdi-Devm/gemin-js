@@ -7,6 +7,7 @@ let inputButton = document.querySelector(".input-button");
 let childcontainerboxicon = document.querySelectorAll(".child-container-box-icon");
 let headerbtn = document.querySelector(".header-btn");
 let headerTitle = document.querySelector(".header-title-h2");
+let textpbox = document.querySelectorAll(".text-p-box");
 
 let colorbg = document.body.style.backgroundColor;
 let isFirstClick = true;
