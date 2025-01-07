@@ -9,31 +9,26 @@ let headerbtn = document.querySelector(".header-btn");
 let headerTitle = document.querySelector(".header-title-h2");
 
 let colorbg = document.body.style.backgroundColor;
+let isFirstClick = true;
 
-// بررسی رنگ پس‌زمینه و تغییر رنگ متن
 headerbtn.addEventListener('click', () => {
-  // اگر رنگ پس‌زمینه سیاه باشد، آن را به سفید تغییر بده
-  if (colorbg === "rgb(0, 0, 0)" || colorbg === "#000000") {  // بررسی رنگ پس‌زمینه سیاه
-    document.body.style.backgroundColor = "#f0f0f0"; // تغییر رنگ به سفید
-    colorbg = "#f0f0f0";  
-    headerTitle.style.color = "#000000"; // تغییر رنگ متن به مشکی برای پس‌زمینه سفید
-  } else {  // در غیر این صورت به رنگ سیاه برگردان
-    document.body.style.backgroundColor = "#000000"; // تغییر رنگ به سیاه
-    colorbg = "#000000";  
-    headerTitle.style.color = "#ffffff"; // تغییر رنگ متن به سفید برای پس‌زمینه سیاه
+  if (colorbg === "rgb(0, 0, 0)" || colorbg === "#000000") {
+    document.body.style.backgroundColor = "#f0f0f0";
+    colorbg = "#f0f0f0";
+    headerTitle.style.color = "#000000";
+  } else {
+    document.body.style.backgroundColor = "#000000";
+    colorbg = "#000000";
+    headerTitle.style.color = "#ffffff";
   }
 });
 
-
-
-let isFirstClick = true;
 
 childcontainerboxicon.forEach((element, index) => {
   element.addEventListener("click", () => {
     let relatedText = textpbox[index];
     if (relatedText) {
-      let textvalbox = relatedText.textContent;
-      customInput.value = textvalbox;
+      customInput.value = relatedText.textContent;
     }
   });
 });
@@ -48,21 +43,14 @@ inputButton.addEventListener("click", async () => {
 
   const userDiv = document.createElement("div");
   userDiv.classList.add("user-content");
-
-
-  const textNode = document.createTextNode(` You: ${userMessage}`);
-
-  userDiv.appendChild(textNode);
+  userDiv.appendChild(document.createTextNode(` You: ${userMessage}`));
   textContainer.appendChild(userDiv);
 
   const data = {
     contents: [
-        {
-            parts: [{ text: `${userMessage}` }],  // بدون اضافه کردن عبارت "Answer briefly"
-        },
+      { parts: [{ text: `${userMessage}` }] },
     ],
-};
-
+  };
 
   try {
     const response = await fetch(url, {
@@ -81,8 +69,7 @@ inputButton.addEventListener("click", async () => {
     icon.classList.add("fas", "fa-paper-plane");
 
     newDiv.appendChild(icon);
-    const textNode = document.createTextNode(` ${content}`);
-    newDiv.appendChild(textNode);
+    newDiv.appendChild(document.createTextNode(` ${content}`));
     textContainer.appendChild(newDiv);
     
   } catch (error) {
