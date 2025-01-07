@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+body{
+    background-color: #000000;
+}
+h2{
+    color: rgb(255, 255, 255);
+}
+.header{
+justify-content: space-between;
+padding: 10px;
+}
+.header-title{
+    font-family: "Open Sans", serif;
+}
+.header-btn{
+    background-color: #1A1C1E;
+    transition: all 400ms ease;
+}
+.header-btn:hover .header-btn-icon{
+    color: rgb(0, 0, 0);
+}
+.header-btn-icon{
+    width: 25px; 
+    height: 25px;
+    color: white;
+}
+.child-container{
+    width: 800px;
+    height: 92vh ;
+}
+.child-container-all-box{
+    height: 190px;
+}
+.child-container-li{
+    height: 655px;
+    background-color: #1A1C1E;
+    border-radius: 10px;
+    color: white;
+}
+/* استایل h1 */
+.child-container-li h1{
+    line-height: 1.6;
+}
+
+.child-container-text{
+    font-family: "Open Sans", serif;
+    font-size: 60px;
+    font-weight: bold; /* ضخامت فونت */
+    background: linear-gradient(45deg, #ff6f61, #ffcc00, #4caf50, #2196f3); /* گرادیانت رنگ */
+    background-clip: text; /* اعمال گرادیانت به متن */
+    -webkit-background-clip: text; /* برای مرورگرهای Webkit */
+    animation: glowing 1.5s ease-in-out infinite alternate; /* انیمیشن درخشش */
+}
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0
+    }
+}
+.child-container-text-tow{
+    opacity: 0.5;
+    font-size: 40px;
+}
+/* استایل container ورودی و دکمه */
+.input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center; /* دکمه و ورودی را در راستای عمودی وسط می‌آورد */
+}
+
+/* استایل ورودی */
+.custom-input {
+    background-color: #1A1C1E; /* رنگ پس‌زمینه ورودی */
+    color: white; /* رنگ متن ورودی */
+    border: 2px solid #ccc; /* حاشیه ورودی */
+    border-radius: 50px; /* حاشیه گرد ورودی */
+    padding: 12px 20px; /* فاصله داخلی ورودی */
+    width: 100%; /* عرض کامل ورودی */
+    font-size: 16px; /* اندازه فونت */
+    font-family: "Open Sans", serif;
+    padding-right: 50px; /* فضای سمت راست برای دکمه */
+}
+
+/* استایل دکمه */
+.input-button {
+    position: absolute;
+    right: 10px; /* قرار دادن دکمه در سمت راست ورودی */
+    background-color: #101213;
+    color: white; /* رنگ متن دکمه */
+    border: none; /* حذف حاشیه */
+    border-radius: 50px; /* گوشه‌های گرد دکمه */
+    padding: 10px 20px; /* فاصله داخلی دکمه */
+    font-size: 16px; /* اندازه فونت دکمه */
+    cursor: pointer; /* نشانگر موس به شکل دست می‌شود */
+    transition: background-color 0.3s ease; /* انیمیشن برای تغییر رنگ پس‌زمینه دکمه */
+}
+
+/* تغییر رنگ دکمه در حالت hover */
+.input-button:hover {
+    background-color: #222629;
+}
+
+/* استایل آیکون داخل دکمه */
+.input-button i {
+    font-size: 20px; /* اندازه آیکون */
+    margin-right: 5px; /* فاصله بین آیکون و متن */
+}
+
+.child-container-box-icon{
+    background-color: #1A1C1E;
+    width: 40px;
+    border-radius: 15px;
+    transition: all 400ms ease;
+}
+.child-container-box-icon:hover{
+    background-color: #26282b;
+}
